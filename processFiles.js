@@ -1,27 +1,4 @@
-/*
-// processFiles.js
-const { readFileAsync, writeFileAsync } = require('./node.js');
 
-async function processFiles(filePaths) {
-    try {
-        const readPromises = filePaths.map(path => readFileAsync(path, 'utf8'));
-        const fileContents = await Promise.all(readPromises);
-
-        const processedContents = fileContents.map(content => content.toUpperCase());
-
-        const writePromises = processedContents.map((content, index) =>
-            writeFileAsync(`output${index}.txt`, content)
-        );
-
-        await Promise.all(writePromises);
-        console.log('All files processed successfully.');
-    } catch (error) {
-        console.error('An error occurred:', error);
-    }
-}
-
-module.exports = processFiles;
-*/
 
 
 const readFileAsync = require('./readFileAsync');
